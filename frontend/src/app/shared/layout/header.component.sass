@@ -1,24 +1,61 @@
 // Custom variables
 @import '../../../assets/sass/vars.sass';
   
+
 .main-header
   height: 100px
   background-color: #111
-  width: 100%
-  ul
+  .main-logo
+    font-size: 4.5em
+    margin: 5px
+  .anim-text-flow, .anim-text-flow-hover:hover 
+    $animationSteps: 20
+    $animationDuration: 50
+    $animationElement: span
+    $animationElementsCount: 100
+    $delayBetweenLetters: 0.2
+
+    #{$animationElement} 
+      animation-name: anim-text-flow-keys
+      animation-duration: #{$animationDuration}s
+      animation-iteration-count: infinite
+      animation-direction: alternate
+      animation-fill-mode: forwards
+
+    @keyframes anim-text-flow-keys 
+      @for $i from 0 through $animationSteps 
+        #{percentage($i * (1 / $animationSteps))}
+          color: hsla(random(365), 60, 60, 1)
+
+    $totalDelayTime: $animationElementsCount * $delayBetweenLetters;
+
+    @for $i from 1 through $animationElementsCount
+      #{$animationElement}:nth-of-type(#{$i}) 
+        animation-delay: #{($i * $delayBetweenLetters) - $totalDelayTime}s;
+
+  .main-links
     float: right
-    list-style: none
-    li
-      display: inline-block
-      margin: 15px
-      a
-        font-size: 1.5em
+    padding: 25px
+    a
+      margin: 0 10px
+      color: #C0C0C0
+      text-shadow: none
+      position: relative
+      font-size: 1.7em
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        overflow: hidden
+        max-width: 0
+        border-bottom: 2px solid #fff
         color: #fff
-        &:hover
-          color: $accent
-
-
-.main-logo
-  font-size: 4em
-  color: #fff
-  margin: 0 15px
+        content: attr(data-hover)
+        transition: max-width 0.5s
+      &:hover:before
+        max-width: 100%
+      &:active:before
+        color: $accent
+        border-bottom: 2px solid $accent
+        transition: 0.3s
+   
