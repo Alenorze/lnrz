@@ -3,45 +3,28 @@
   
 
 .main-header
-  height: 100px
-  background-color: #111
-  .main-logo
-    font-size: 4.5em
-    margin: 5px
-  .anim-text-flow, .anim-text-flow-hover:hover 
-    $animationSteps: 20
-    $animationDuration: 50
-    $animationElement: span
-    $animationElementsCount: 100
-    $delayBetweenLetters: 0.2
-
-    #{$animationElement} 
-      animation-name: anim-text-flow-keys
-      animation-duration: #{$animationDuration}s
-      animation-iteration-count: infinite
-      animation-direction: alternate
-      animation-fill-mode: forwards
-
-    @keyframes anim-text-flow-keys 
-      @for $i from 0 through $animationSteps 
-        #{percentage($i * (1 / $animationSteps))}
-          color: hsla(random(365), 60, 60, 1)
-
-    $totalDelayTime: $animationElementsCount * $delayBetweenLetters;
-
-    @for $i from 1 through $animationElementsCount
-      #{$animationElement}:nth-of-type(#{$i}) 
-        animation-delay: #{($i * $delayBetweenLetters) - $totalDelayTime}s;
-
+  height: 65px
+  width: 100%
+  position: fixed
+  z-index: 100
+  background-color: transparent
+  .logo-text
+    font-size: 3em
+    position: fixed
+    top: 10px
+    left: 15px
   .main-links
     float: right
-    padding: 25px
+    padding: 22px
+    width: 100%
+    text-align: center
+    position: relative
     a
       margin: 0 10px
-      color: #C0C0C0
+      color: #dedede
       text-shadow: none
       position: relative
-      font-size: 1.7em
+      font-size: 1.9em
       &:before
         position: absolute
         top: 0
@@ -58,4 +41,4 @@
         color: $accent
         border-bottom: 2px solid $accent
         transition: 0.3s
-   
+

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+declare const $: any;
+
+
 @Component({
   selector: 'app-layout-header',
   templateUrl: './header.component.html',
@@ -10,12 +13,9 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $(document).ready(function(){
-        $("button").click(function(){
-            var div = $("div");  
-            div.animate({left: '100px'}, "slow");
-            div.animate({fontSize: '5em'}, "slow");
-        });
+    $('.logo-text').html(function(i, html) {
+      const chars = $.trim(html).split('');
+      return '<span>' + chars.join('</span><span>') + '</span>';
     });
   }
 
