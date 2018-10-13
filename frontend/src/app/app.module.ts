@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/layout/footer.component';
 import { HeaderComponent } from './shared/layout/header.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { TeamComponent } from './team/team.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 
@@ -15,6 +18,9 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
+    AboutComponent,
+    TeamComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
