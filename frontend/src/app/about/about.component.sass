@@ -1,0 +1,103 @@
+// Custom variables
+@import '../../assets/sass/vars.sass';
+
+
+  
+.layout
+  background-color: #222
+  height: 100vh
+  width: 100%
+  .content 
+    padding-top: 100px
+    .list-top
+      a
+        color: #fff
+        margin: 5px
+        font-size: 1.3em
+        &:hover
+          color: $accent
+        i
+          font-size: 1.4em
+          color: #999
+          padding: 10px
+  .about-content
+    padding: 45px 0
+    font-size: 1.5em
+    color: #fff
+  .list-header
+    font-size: 2.5em
+    color: $title_color
+
+.social-btns
+  .btn
+    transition: all 0.35s
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59)
+    &:before, .fab
+      transition: all 0.35s
+      transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59)
+    &:before
+      top: 90%
+      left: -110%
+    .fab
+      -webkit-transform: scale(0.8)
+      transform: scale(0.8)
+    &.facebook
+      &:before 
+        background-color: #3b5998
+      .fab
+        color: #3b5998
+    &.twitter
+      &:before
+        background-color: #3cf
+      .fab
+        color: #3cf
+    &.instagram
+      &:hover
+        .fab
+          color: #c13584
+      &:before
+        background-color: #fff
+      .fab
+        color: #e1306c
+    &.dribbble
+      &:before
+        background-color: #f26798
+      .fab
+        color: #f26798
+    &.skype
+      &:before
+        background-color: #00aff0
+      .fab
+        color: #00aff0
+    &:focus:before, &:hover:before
+      top: -10%
+      left: -10%
+    &:focus .fab, &:hover .fab
+      color: #fff
+      -webkit-transform: scale(1)
+      transform: scale(1)
+    display: inline-block
+    background-color: #222
+    width: 50px
+    height: 50px
+    line-height: 50px
+    margin: 0 10px
+    text-align: center
+    position: relative
+    overflow: hidden
+    border-radius: 28%
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1)
+    opacity: 0.99
+    &:before
+      content: ''
+      width: 120%
+      height: 120%
+      position: absolute
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+    .fab
+      font-size: 38px
+      vertical-align: middle
+  font-size: 0
+  text-align: center
+  width: 280px
