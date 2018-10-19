@@ -1,6 +1,6 @@
 import { Injectable, Injector } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+
 
 import { JwtService } from '../services';
 
@@ -8,7 +8,7 @@ import { JwtService } from '../services';
 export class HttpTokenInterceptor implements HttpInterceptor {
   constructor(private jwtService: JwtService) {}
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(req: HttpRequest<any>, next: HttpHandler) {
     const headersConfig = {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
