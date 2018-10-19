@@ -1,0 +1,80 @@
+// Custom variables
+@import '../../assets/sass/vars.sass';
+
+
+
+.team-card
+  width: 300px
+  display: inline-block
+  margin: 0 20px 20px 0
+
+.team-container
+  margin: 0 7%
+  .team-bar-element
+    display: inline-block
+    margin: 0 30px
+    h1
+      font-size: 4em
+      color: $title_color
+      margin-right: 80px
+  .team-bar-sort
+    margin-top: 50px
+    display: inline-block
+
+// TEMP Filter
+.dropdown
+  position: relative
+  display: block
+  margin: 0
+  background: #444
+  color: #666
+  border-radius: 4px
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1)
+  overflow: hidden
+  li:hover:not(.title)
+    background-color: #efefef
+  strong
+    color: #3E3E3E
+    font-weight: 400
+    display: block
+    margin-bottom: 0.75em
+  li
+    &.title
+      font-size: 16px
+      padding: 10px 12px
+      color: #81c483
+    &.divider
+      background-color: #cfcfcf
+      height: 1px
+    &.note
+      background: #444
+      border-top: 1px solid #cfcfcf
+      color: #aaa
+      font-size: 12px
+      padding: 12px
+    label
+      display: block
+      line-height: 36px
+      padding-left: 36px
+      > span
+        position: absolute
+        display: inline-block
+        left: 12px
+        margin-top: 12px
+        width: 12px
+        height: 12px
+        border: 1px solid #cfcfcf
+        -webkit-transition: all 0.5s ease
+        -moz-transition: all 0.5s ease
+        -ms-transition: all 0.5s ease
+        -o-transition: all 0.5s ease
+        transition: all 0.5s ease
+      input
+        display: none
+        &[type=checkbox] ~ span
+          border-radius: 2px
+        &[type=radio] ~ span
+          border-radius: 100%
+        &[type=checkbox]:checked ~ span, &[type=radio]:checked ~ span
+          background-color: #81c483
+          border: 1px solid #999

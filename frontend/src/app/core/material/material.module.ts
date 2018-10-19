@@ -22,6 +22,7 @@ import {
   MatGridListModule,
   MatDividerModule,
   MatListModule,
+  MatSelectModule,
 } from '@angular/material';
 
 
@@ -40,6 +41,7 @@ import {
     MatDividerModule,
     MatListModule,
     MatTabsModule,
+    MatSelectModule,
   ],
   exports: [
     MatMenuModule,
@@ -55,6 +57,7 @@ import {
     MatDividerModule,
     MatListModule,
     MatTabsModule,
+    MatSelectModule,
   ]
 })
 export class MaterialModule { }
