@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var ParticleNetwork: any;
+declare const $: any;
+
 
 
 @Component({
@@ -12,6 +13,8 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    $('.main-header').removeClass('dark-header');
+  }
 
 }

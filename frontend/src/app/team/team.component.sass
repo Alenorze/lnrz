@@ -3,20 +3,25 @@
 
 
 
-.team-card
-  width: 300px
-  display: inline-block
-  margin: 0 20px 20px 0
-
 .team-container
   margin: 0 7%
+  .mat-form-field
+    width: 300px
+  .team-card
+    width: 300px
+    display: inline-block
+    margin: 0 20px 20px 0
+    background-color: #111
   .team-bar-element
     display: inline-block
     margin: 0 30px
     h1
       font-size: 4em
       color: $title_color
-      margin-right: 80px
+      margin-right: 50px
+      #cursor
+        font-weight: 800
+        margin: 0 2px
   .team-bar-sort
     margin-top: 50px
     display: inline-block
@@ -26,7 +31,7 @@
   position: relative
   display: block
   margin: 0
-  background: #444
+  background: #111
   color: #666
   border-radius: 4px
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1)
@@ -64,10 +69,6 @@
         width: 12px
         height: 12px
         border: 1px solid #cfcfcf
-        -webkit-transition: all 0.5s ease
-        -moz-transition: all 0.5s ease
-        -ms-transition: all 0.5s ease
-        -o-transition: all 0.5s ease
         transition: all 0.5s ease
       input
         display: none
