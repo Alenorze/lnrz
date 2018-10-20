@@ -1,9 +1,28 @@
 // Custom variables
-@import '../../assets/sass/vars.sass';
+@import '../../assets/sass/vars.sass'
+
+
+
+::-webkit-scrollbar
+  width: 0px
+  background: transparent
+
+::-webkit-scrollbar-track
+  background: transparent
+
+::-webkit-scrollbar-thumb
+  background: transparent
 
 
 .team-container
   margin: 0 7%
+  .team-card-container
+    overflow-y: scroll
+    height: 80vh
+    width: 100%
+    justify-content: flex-start
+    display: flex
+    flex-flow: row wrap
   .mat-form-field
     width: 200px
   .mat-divider
@@ -12,8 +31,9 @@
   .select
     width: 100px
   .team-card
-    width: 300px
-    display: inline-block
+    position: relative
+    width: 30em
+    flex: auto
     margin: 0 20px 20px 0
     background-color: #111
   .team-sort
@@ -33,11 +53,13 @@
 
 // TEMP Filter
 .filter
-  display: flex;
-  flex-direction: column;
-  padding: 0.5em;
+  overflow-y: auto
+  display: flex
+  flex-direction: column
+  padding: 0.5em
   background: #111
   border-radius: 4px
+  height: 75vh
   h2
     font-size: 2em
     color: $title_color

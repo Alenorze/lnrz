@@ -13,8 +13,6 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    $('.main-header').removeClass('dark-header');
-  }
+  ngOnInit() { }
 
 }
