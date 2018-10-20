@@ -1,98 +1,179 @@
 <div class="team-container">
-  <div class="team-bar">
-    <div class="team-bar-element">
+  <div class="team-sort">
+    <div class="team-logo">
       <h1>Our team<span id="cursor">_</span></h1>
     </div>
-    <div class="team-bar-element">
-      <div class="team-bar-element">
-        <mat-form-field>
-          <mat-select placeholder="Favorite food">
-            <mat-option>
-              Newest
-            </mat-option>
-            <mat-option>
-              Oldest
-            </mat-option>
-            <mat-option>
-              High rating
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div class="team-bar-element">
-      <form>
-        <mat-form-field class="search">
-          <input matInput placeholder="Search...">
-        </mat-form-field>
-      </form>
+  </div>
+  <div class="team-sort bar">
+    <div class="sort-view-buttons">
+      <a href="#"><i class="fas fa-th-list"></i></a>
+      <a href="#"><i class="fas fa-th"></i></a>
     </div>
-    </div>
+  </div>
+  <div class="team-sort bar">
+    <form>
+      <mat-form-field class="search">
+        <input matInput placeholder="Search...">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="team-sort bar">
+    <mat-form-field class="select">
+      <mat-select>
+        <mat-option>
+          Newest
+        </mat-option>
+        <mat-option>
+          Oldest
+        </mat-option>
+        <mat-option>
+          High rating
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
   <div class="row">
     <div class="col-3">
-      <div class="temp-filter">
-        <ul class="dropdown">
-          <li class="title">Category</li>
-          <li>
-            <label>Checkbox 1
-              <input type="checkbox" name="category[]" value="checkbox 1" checked/><span></span></label>
-          </li>
-          <li>
-            <label>Checkbox 2
-              <input type="checkbox" name="category[]" value="checkbox 2" /><span></span></label>
-          </li>
-          <li>
-            <label>Checkbox 3
-              <input type="checkbox" name="category[]" value="checkbox 3" /><span></span></label>
-          </li>
-          <li>
-            <label>Checkbox 2
-              <input type="checkbox" name="category[]" value="checkbox 2" /><span></span></label>
-          </li>
-          <li>
-            <label>Checkbox 3
-              <input type="checkbox" name="category[]" value="checkbox 3" /><span></span></label>
-          </li>
-          <li>
-            <label>Checkbox 4
-              <input type="checkbox" name="category[]" value="checkbox 4" /><span></span></label>
-          </li>
-          <li>
-            <label>Checkbox 5
-              <input type="checkbox" name="category[]" value="checkbox 5" /><span></span></label>
-          </li>
-          <li>
-            <label>Checkbox 6
-              <input type="checkbox" name="category[]" value="checkbox 6" /><span></span></label>
-          </li>
-          <li class="divider"></li>
-          <li class="title">Product Filter</li>
-          <li>
-            <label>Radio 1
-              <input type="radio" name="filter" value="radio 1" checked="" /><span></span></label>
-          </li>
-          <li>
-            <label>Radio 2
-              <input type="radio" name="filter" value="radio 2" /><span></span></label>
-          </li>
-          <li>
-            <label>Radio 1
-              <input type="radio" name="filter" value="radio 1" checked="" /><span></span></label>
-          </li>
-          <li>
-            <label>Radio 2
-              <input type="radio" name="filter" value="radio 2" /><span></span></label>
-          </li>
-          <li>
-            <label>Radio 1
-              <input type="radio" name="filter" value="radio 1" checked="" /><span></span></label>
-          </li>
-          <li>
-            <label>Radio 2
-              <input type="radio" name="filter" value="radio 2" /><span></span></label>
-          </li>
-          <li class="note"><strong>Set your preferred language.</strong> This will be your default for searching and browsing, but we'll still show you results for other languages.</li>
-        </ul>
+      <div class="filter">
+        <h2>Type</h2>
+        <mat-list>
+          <mat-list-item>
+            <input id='1' type='checkbox'>
+            <label for='1'>
+              <span></span>
+              Frontend
+              <ins><i>Frontend</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='2' type='checkbox'>
+            <label for='2'>
+              <span></span>
+              Backend
+              <ins><i>Backend</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='3' type='checkbox'>
+            <label for='3'>
+              <span></span>
+              Fullstack
+              <ins><i>Fullstack</i></ins>
+            </label>
+          </mat-list-item>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <h2>Programming language</h2>
+        <mat-list>
+          <mat-list-item>
+            <input id='4' type='checkbox'>
+            <label for='4'>
+              <span></span>
+              Javascript
+              <ins><i>Javascript</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='4' type='checkbox'>
+            <label for='4'>
+              <span></span>
+              Python
+              <ins><i>Python</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='5' type='checkbox'>
+            <label for='5'>
+              <span></span>
+              Typescript
+              <ins><i>Typescript</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='6' type='checkbox'>
+            <label for='6'>
+              <span></span>
+              C++
+              <ins><i>C++</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='7' type='checkbox'>
+            <label for='7'>
+              <span></span>
+              Golang
+              <ins><i>Golang</i></ins>
+            </label>
+          </mat-list-item>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <h2>Framework</h2>
+        <mat-list>
+          <mat-list-item>
+            <input id='8' type='checkbox'>
+            <label for='8'>
+              <span></span>
+              Angular
+              <ins><i>Angular</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='9' type='checkbox'>
+            <label for='9'>
+              <span></span>
+              React
+              <ins><i>React</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='10' type='checkbox'>
+            <label for='10'>
+              <span></span>
+              Vue.js
+              <ins><i>Vue.js</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='11' type='checkbox'>
+            <label for='11'>
+              <span></span>
+              Django
+              <ins><i>Django</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='12' type='checkbox'>
+            <label for='12'>
+              <span></span>
+              Flask
+              <ins><i>Flask</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='13' type='checkbox'>
+            <label for='13'>
+              <span></span>
+              Tornado
+              <ins><i>Tornado</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='14' type='checkbox'>
+            <label for='14'>
+              <span></span>
+              Gin
+              <ins><i>Gin</i></ins>
+            </label>
+          </mat-list-item>
+          <mat-list-item>
+            <input id='15' type='checkbox'>
+            <label for='15'>
+              <span></span>
+              Echo
+              <ins><i>Echo</i></ins>
+            </label>
+          </mat-list-item>
+        </mat-list>
       </div>
     </div>
     <div class="col-9">
