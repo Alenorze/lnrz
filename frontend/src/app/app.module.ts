@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { TeamComponent } from './team/team.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { ProjectsDetailComponent } from './projects/projects-detail/projects-detail.component';
 
 
 
@@ -23,6 +24,7 @@ import { ArticlesComponent } from './articles/articles.component';
     TeamComponent,
     ProjectsComponent,
     ArticlesComponent,
+    ProjectsDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,37 @@
+.article-page
+  background-color: #111
+  height: 1000px
+  box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75)
+  border-radius: 4px
+  .bg-img
+    position: relative
+    border-radius: 4px
+    top: 0
+    left: 0
+    height: 300px
+    background: url('http://www.wallpapers4u.org/wp-content/uploads/honeycomb_honey_bees_pollination_insects_43016_1920x1080.jpg') center center no-repeat
+    background-size: cover
+    &:before
+      content: ''
+      position: absolute
+      height: 100px
+      margin-top: auto
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: linear-gradient(to bottom, rgba(17,17,17,0), rgba(17,17,17,1))
+      opacity: 1
+    h1
+      z-index: 100
+      color: #fff
+      text-transform: uppercase
+      top: 230px
+      left: 80px
+      font-size: 3.5em
+      position: relative
+      font-weight: 100
+  .main-text p
+    padding: 30px
+    font-size: 1.5em
+    color: #fff
